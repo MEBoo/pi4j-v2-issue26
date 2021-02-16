@@ -28,7 +28,7 @@ package com.pi4j.io;
  */
 
 import com.pi4j.context.Context;
-import com.pi4j.io.exception.IOException;
+import com.pi4j.exception.Pi4JException;
 import com.pi4j.io.gpio.analog.*;
 import com.pi4j.io.gpio.digital.*;
 import com.pi4j.io.i2c.I2CConfig;
@@ -115,9 +115,13 @@ public enum IOType {
         return configBuilderClass;
     }
 
-    public <CB extends IOConfigBuilder>CB newConfigBuilder(Context context) throws Exception {
-        Method newInstance = getConfigBuilderClass().getMethod("newInstance", Context.class);
-        return (CB)newInstance.invoke(null, context);
+    public <CB extends IOConfigBuilder>CB newConfigBuilder(Context context) {
+        try {
+            Method newInstance = getConfigBuilderClass().getMethod("newInstance", Context.class);
+            return (CB)newInstance.invoke(null, context);
+        } catch (Exception e) {
+            throw new Pi4JException(e);
+        }
     }
 
     /**
@@ -260,17 +264,15 @@ public enum IOType {
      *
      * @param ioType a {@link java.lang.String} object.
      * @return a {@link com.pi4j.io.IOType} object.
-     * @throws IOException if {@link IOType} could not be defined.
      */
-    public static IOType parse(String ioType) throws IOException {
+    public static IOType parse(String ioType) {
 
         try {
             IOType iot = IOType.valueOf(ioType);
             if (iot != null) {
                 return iot;
             }
-        }
-        catch (Exception e){}
+        } catch (Exception e){}
 
         // lower case the string for comparisons
         ioType = ioType.toLowerCase();
@@ -347,6 +349,6 @@ public enum IOType {
         if(ioType.equalsIgnoreCase("rs232")) return SERIAL;
 
 
-        throw new IOException("Unknown IO TYPE: " + ioType);
+        throw new IllegalArgumentException("Unknown IO TYPE: " + ioType);
     }
 }
