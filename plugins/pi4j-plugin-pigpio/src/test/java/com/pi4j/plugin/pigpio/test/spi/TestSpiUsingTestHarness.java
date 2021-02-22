@@ -29,6 +29,10 @@ package com.pi4j.plugin.pigpio.test.spi;
  * #L%
  */
 
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.nio.ByteBuffer;
+
 import com.pi4j.Pi4J;
 import com.pi4j.context.Context;
 import com.pi4j.io.spi.Spi;
@@ -42,10 +46,6 @@ import com.pi4j.test.harness.TestHarnessPins;
 import org.junit.jupiter.api.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.nio.ByteBuffer;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 
 @DisplayName("PIGPIO Plugin :: Test SPI Communication using Test Harness")
@@ -131,7 +131,7 @@ public class TestSpiUsingTestHarness {
             // create SPI instance
             spi = pi4j.create(config);
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
         }
     }
 
