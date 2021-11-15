@@ -219,7 +219,6 @@
 
         <pi4j.test.pigpio.host>${pi4j.default.host}</pi4j.test.pigpio.host>
         <pi4j.test.pigpio.port>8888</pi4j.test.pigpio.port>
-
         <!-- SETTING FOR ARDUINO TEST HARNESS HARDWARE TESTING -->
         <!-- (you will need to override these in your "~/.m2/settings.xml" for your own development) -->
         <pi4j.test.harness.enabled>false</pi4j.test.harness.enabled>
