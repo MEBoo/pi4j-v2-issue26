@@ -150,6 +150,7 @@ public class LinuxFsDigitalOutput extends DigitalOutputBase implements DigitalOu
     public DigitalState state() {
         logger.trace("get state on GPIO [" + this.config.address() + "]; " + gpio.getPinPath());
 
+        // update internal state tracking variable with actual state from Linux FS
         try {
             // acquire actual GPIO state directly from Linux file system impl
             DigitalState currentState = gpio.state();
