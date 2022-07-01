@@ -60,9 +60,8 @@ public class PiGpioDigitalMultipurpose extends DigitalMultipurposeBase implement
      * @param piGpio a {@link PiGpio} object.
      * @param provider a {@link DigitalInputProvider} object.
      * @param config a {@link DigitalInputConfig} object.
-     * @throws IOException if any.
      */
-    public PiGpioDigitalMultipurpose(PiGpio piGpio, DigitalMultipurposeProvider provider, DigitalMultipurposeConfig config) throws IOException {
+    public PiGpioDigitalMultipurpose(PiGpio piGpio, DigitalMultipurposeProvider provider, DigitalMultipurposeConfig config) {
         super(provider, config);
         this.piGpio = piGpio;
         this.pin = config.address().intValue();
@@ -84,7 +83,7 @@ public class PiGpioDigitalMultipurpose extends DigitalMultipurposeBase implement
             // configure GPIO pin as an INPUT|OUTPUT pin
             PiGpioMode pgpiomode = (mode.isOutput()) ? PiGpioMode.OUTPUT : PiGpioMode.INPUT;
             this.piGpio.gpioSetMode(pin, pgpiomode);
-        } catch (IOException e) {
+        } catch (com.pi4j.io.exception.IOException e) {
             logger.error(e.getMessage(), e);
             throw new InitializeException(e);
         }
@@ -119,7 +118,7 @@ public class PiGpioDigitalMultipurpose extends DigitalMultipurposeBase implement
             // add this pin listener
             this.piGpio.addPinListener(pin, piGpioPinListener);
 
-        } catch (IOException e) {
+        } catch (com.pi4j.io.exception.IOException e) {
             logger.error(e.getMessage(), e);
             throw new InitializeException(e);
         }
@@ -133,7 +132,7 @@ public class PiGpioDigitalMultipurpose extends DigitalMultipurposeBase implement
             // configure GPIO pin as an INPUT|OUTPUT pin
             PiGpioMode pgpiomode = (mode.isOutput()) ? PiGpioMode.OUTPUT : PiGpioMode.INPUT;
             this.piGpio.gpioSetMode(pin, pgpiomode);
-        } catch (IOException e) {
+        } catch (com.pi4j.io.exception.IOException e) {
             logger.error(e.getMessage(), e);
             throw new IOModeException(e.getMessage());
         }
@@ -150,7 +149,7 @@ public class PiGpioDigitalMultipurpose extends DigitalMultipurposeBase implement
         }
         try {
             this.piGpio.gpioWrite(pin, PiGpioState.from(state.value()));
-        } catch (IOException e) {
+        } catch (com.pi4j.io.exception.IOException e) {
             logger.error(e.getMessage(), e);
             throw new com.pi4j.io.exception.IOException(e.getMessage(), e);
         }
