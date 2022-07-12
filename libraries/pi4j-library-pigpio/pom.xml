@@ -7,8 +7,8 @@
     <!-- MAVEN PARENT POM -->
     <parent>
         <artifactId>pi4j-library</artifactId>
-        <groupId>com.pi4j</groupId>
-        <version>2.2.0-SNAPSHOT</version>
+        <groupId>io.github.meboo.pi4j</groupId>
+        <version>2.2.0-issue26</version>
         <relativePath>../pi4j-library/pom.xml</relativePath>
     </parent>
 
@@ -159,7 +159,7 @@
                         </goals>
                         <configuration>
                             <includeScope>runtime</includeScope>
-                            <excludeGroupIds>com.pi4j</excludeGroupIds>
+                            <excludeGroupIds>io.github.meboo.pi4j</excludeGroupIds>
                             <outputDirectory>${project.build.directory}/dependencies</outputDirectory>
                             <overWriteReleases>false</overWriteReleases>
                             <overWriteSnapshots>false</overWriteSnapshots>

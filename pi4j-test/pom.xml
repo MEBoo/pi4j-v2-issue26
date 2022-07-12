@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>pi4j-parent</artifactId>
-        <groupId>com.pi4j</groupId>
-        <version>2.2.0-SNAPSHOT</version>
+        <groupId>io.github.meboo.pi4j</groupId>
+        <version>2.2.0-issue26</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -16,7 +16,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-core</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -27,7 +27,7 @@
 
         <!-- include Pi4J Plugins (Platforms and I/O Providers) -->
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-plugin-mock</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -66,13 +66,13 @@
                 <configuration>
                     <argLine>
                         --illegal-access=permit
-                        --add-opens com.pi4j.test/com.pi4j.test=com.pi4j,ALL-UNNAMED
-                        --add-opens com.pi4j.test/com.pi4j.test.context=com.pi4j,ALL-UNNAMED
-                        --add-opens com.pi4j.test/com.pi4j.test.io.i2c=com.pi4j,ALL-UNNAMED
-                        --add-opens com.pi4j.test/com.pi4j.test.io.serial=com.pi4j,ALL-UNNAMED
-                        --add-opens com.pi4j.test/com.pi4j.test.platform=com.pi4j,ALL-UNNAMED
-                        --add-opens com.pi4j.test/com.pi4j.test.provider=com.pi4j,ALL-UNNAMED
-                        --add-opens com.pi4j.test/com.pi4j.test.registry=com.pi4j,ALL-UNNAMED
+                        --add-opens io.github.meboo.pi4j.test/io.github.meboo.pi4j.test=io.github.meboo.pi4j,ALL-UNNAMED
+                        --add-opens io.github.meboo.pi4j.test/io.github.meboo.pi4j.test.context=io.github.meboo.pi4j,ALL-UNNAMED
+                        --add-opens io.github.meboo.pi4j.test/io.github.meboo.pi4j.test.io.i2c=io.github.meboo.pi4j,ALL-UNNAMED
+                        --add-opens io.github.meboo.pi4j.test/io.github.meboo.pi4j.test.io.serial=io.github.meboo.pi4j,ALL-UNNAMED
+                        --add-opens io.github.meboo.pi4j.test/io.github.meboo.pi4j.test.platform=io.github.meboo.pi4j,ALL-UNNAMED
+                        --add-opens io.github.meboo.pi4j.test/io.github.meboo.pi4j.test.provider=io.github.meboo.pi4j,ALL-UNNAMED
+                        --add-opens io.github.meboo.pi4j.test/io.github.meboo.pi4j.test.registry=io.github.meboo.pi4j,ALL-UNNAMED
                     </argLine>
                 </configuration>
             </plugin>
@@ -102,7 +102,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.pi4j.test.Main</mainClass>
+                    <mainClass>io.github.meboo.pi4j.test.Main</mainClass>
                     <arguments>
                     </arguments>
                 </configuration>

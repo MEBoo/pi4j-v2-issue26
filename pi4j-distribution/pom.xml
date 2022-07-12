@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>pi4j-parent</artifactId>
-        <groupId>com.pi4j</groupId>
-        <version>2.2.0-SNAPSHOT</version>
+        <groupId>io.github.meboo.pi4j</groupId>
+        <version>2.2.0-issue26</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -19,18 +19,18 @@
 
         <!-- include Pi4J Core -->
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-core</artifactId>
             <version>${project.version}</version>
             <classifier>sources</classifier>
         </dependency>
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-core</artifactId>
             <version>${project.version}</version>
             <classifier>javadoc</classifier>
@@ -38,29 +38,29 @@
 
         <!-- include Pi4J Plugins (Platforms and I/O Providers) -->
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-plugin-raspberrypi</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-plugin-pigpio</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-plugin-linuxfs</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <!-- include Pi4J Plugins (Platforms and I/O Providers) -->
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-library-pigpio</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-library-linuxfs</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -70,14 +70,14 @@
         -->
         <!-- pigpio -->
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-library-pigpio</artifactId>
             <version>${project.version}</version>
             <classifier>armhf</classifier>
             <type>so</type>
         </dependency>
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-library-pigpio</artifactId>
             <version>${project.version}</version>
             <classifier>aarch64</classifier>
@@ -86,14 +86,14 @@
 
         <!-- linuxfs -->
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-library-linuxfs</artifactId>
             <version>${project.version}</version>
             <classifier>armhf</classifier>
             <type>so</type>
         </dependency>
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-library-linuxfs</artifactId>
             <version>${project.version}</version>
             <classifier>aarch64</classifier>
@@ -135,7 +135,7 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>com.pi4j</groupId>
+                                    <groupId>io.github.meboo.pi4j</groupId>
                                     <artifactId>pi4j-parent</artifactId>
                                     <version>${project.version}</version>
                                     <classifier>license</classifier>
@@ -145,7 +145,7 @@
                                     <outputDirectory>${project.build.directory}/distro-contents</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>com.pi4j</groupId>
+                                    <groupId>io.github.meboo.pi4j</groupId>
                                     <artifactId>pi4j-parent</artifactId>
                                     <version>${project.version}</version>
                                     <classifier>notice</classifier>
@@ -155,7 +155,7 @@
                                     <outputDirectory>${project.build.directory}/distro-contents</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>com.pi4j</groupId>
+                                    <groupId>io.github.meboo.pi4j</groupId>
                                     <artifactId>pi4j-parent</artifactId>
                                     <version>${project.version}</version>
                                     <classifier>readme</classifier>

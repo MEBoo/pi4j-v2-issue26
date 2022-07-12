@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>pi4j-plugin</artifactId>
-        <groupId>com.pi4j</groupId>
-        <version>2.2.0-SNAPSHOT</version>
+        <groupId>io.github.meboo.pi4j</groupId>
+        <version>2.2.0-issue26</version>
         <relativePath>../pi4j-plugin/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>

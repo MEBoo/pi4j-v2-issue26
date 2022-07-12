@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>pi4j-plugin</artifactId>
-        <groupId>com.pi4j</groupId>
-        <version>2.2.0-SNAPSHOT</version>
+        <groupId>io.github.meboo.pi4j</groupId>
+        <version>2.2.0-issue26</version>
         <relativePath>../pi4j-plugin/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -22,7 +22,7 @@
             <version>${jsch.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.pi4j</groupId>
+            <groupId>io.github.meboo.pi4j</groupId>
             <artifactId>pi4j-library-linuxfs</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -55,7 +55,7 @@
                         </goals>
                         <configuration>
                             <includeScope>runtime</includeScope>
-                            <excludeGroupIds>com.pi4j</excludeGroupIds>
+                            <excludeGroupIds>io.github.meboo.pi4j</excludeGroupIds>
                             <outputDirectory>${project.build.directory}/dependencies</outputDirectory>
                             <overWriteReleases>false</overWriteReleases>
                             <overWriteSnapshots>false</overWriteSnapshots>
