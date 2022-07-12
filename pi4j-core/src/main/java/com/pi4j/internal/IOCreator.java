@@ -189,6 +189,16 @@ public interface IOCreator {
     /**
      * <p>create.</p>
      *
+     * @param config a {@link com.pi4j.io.gpio.digital.DigitalMultipurposeConfigBuilder} object.
+     * @return a {@link com.pi4j.io.gpio.digital.DigitalMultipurpose} object.
+     */
+    default DigitalMultipurpose create(DigitalMultipurposeConfigBuilder config) {
+        return create(config.build(),DigitalMultipurpose.class);
+    }
+
+    /**
+     * <p>create.</p>
+     *
      * @param config a {@link com.pi4j.io.pwm.PwmConfigBuilder} object.
      * @return a {@link com.pi4j.io.pwm.Pwm} object.
      */
